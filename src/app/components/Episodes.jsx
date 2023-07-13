@@ -30,10 +30,10 @@ return (
     <h1 className="text-3xl text-darker">Episode: {name === "" ? "Unknown" : name}</h1>
     <h2 className="text-2xl text-accent">Air Data: {air_date === "" ? "Unknown" : air_date}</h2>
   </div>
-  <div className="grid grid-cols-3">
+  <InputEpisodes  setID={setID} total={51} name={"Episode"}/>
+  <div className="grid grid-cols-2 lg:grid-cols-4 md:w-fit justify-center gap-5">
     <Card results={results}/>
   </div>
-  <InputEpisodes  setID={setID} total={51} name={"Episode"}/>
   </>
 );
 }

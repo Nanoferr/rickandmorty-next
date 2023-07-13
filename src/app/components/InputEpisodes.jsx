@@ -6,7 +6,7 @@ const numberEpisodes = [...Array(total).keys()]; //metodo para utilizar un array
 
     return (
         <>
-         <div className="p-5 absolute left-0 bottom-10">
+         <div className="p-5 md:absolute right-0 bottom-10">
             <select onChange={e => setID(e.target.value)} className="w-60 focus:border-blue-500 bg-primary border border-gray-300 text-white text-2xl">
                 {
                     numberEpisodes.map((x) => {
