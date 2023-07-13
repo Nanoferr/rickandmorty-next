@@ -5,6 +5,7 @@ import { Search } from "./Search";
 import { Pagination } from "./Pagination";
 import { Card } from "./Card";
 import { Filters } from "./Filters";
+import { Episodes } from "./Episodes";
 
 
 export function Characters() {
@@ -15,8 +16,11 @@ export function Characters() {
   let [status, setStatus] = useState("");
   let [gender, setGender] = useState("");
   let [species, setSpecies] = useState("");
+  
+ 
 
-  let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search}&status=${status}&gender=${gender}&species=${species}`
+let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search}&status=${status}&gender=${gender}&species=${species}`
+
 
   useEffect(() => {
     (async function () {
@@ -31,15 +35,13 @@ export function Characters() {
       <Search setSearch={setSearch} setPage={setPage} />
     </div>
       <Filters setStatus = {setStatus} setPage={setPage} setGender={setGender} setSpecies={setSpecies}/>
-    <div className="grid grid-cols-3">
+       <div className="lg:grid lg:grid-cols-4 grid grid-cols-3 md:w-fit justify-center gap-5">
       <Card results={results} />
       </div>
     <Pagination info={info} setPage={setPage}/>
     </>
   );
 }
-
-
 
 
 /* <div className="grid grid-cols-2 gap-8 justify-center p-2 font-serif font-bold">

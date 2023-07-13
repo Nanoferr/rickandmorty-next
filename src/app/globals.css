@@ -17,9 +17,8 @@
 }
 
 body {
-  color: black;
-  background: white;
+  background: #868C6F;
   padding: 100px;
-  max-width: 800px;
+  max-width: 1700px;
   margin: 0 auto;
 }

@@ -5,12 +5,16 @@ const links = [{
     route: '/'
   },
   {
-    label: 'About',
-    route: '/about'
-  },
-  {
     label: 'Characters',
     route: '/characters'
+  },
+  {
+    label: 'Episodes',
+    route: '/episodes'
+  },
+  {
+    label: 'Locations',
+    route: '/locations'
   }
   ]
 
@@ -18,9 +22,9 @@ export function Navigation () {
     return (
         <header className='p-3'>
         <nav >
-          <ul className='flex p-5 gap-10 border-2'> 
+          <ul className='justify-center flex p-5 gap-10 text-3xl bg-clear font-sans font-bold'> 
             {links.map(({label, route}) => (
-              <li className='hover:underline' key={route}>
+              <li className='md:hover:translate-x-3 duration-500 ease-in-out' key={route}>
                 <Link href={route}>
                 {label}
                 </Link>

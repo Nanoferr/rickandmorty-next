@@ -12,12 +12,15 @@ export default async function CharacterPage ({ params }) {
   
     return (
       <>
-        <div className="justify-center p-10 m-5 font-serif font-semibold">
-          <h1>Este es el character {character.name}</h1>
+        <div className="justify-center p-10 m-5 font-serif font-bold text-2xl bg-blue-gray-300 rounded-2xl w-fit border-2 border-black">
+          <h1 className="ml-20">{character.name}</h1>
+          <img className="border-2 border-black" src={character.image}/>
+          <div className="grid grid-cols-1 p-6">
           <p>Status: {character.status}</p>
           <p>Gender: {character.gender}</p>
           <p>Specie: {character.species}</p>
-          <img src={character.image}/>
+          <p>Location: {character.location.name}</p>
+          </div>
         </div>
       </>
     )
