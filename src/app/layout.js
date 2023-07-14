@@ -1,8 +1,9 @@
-import { Inter } from 'next/font/google'
+import { Pangolin } from 'next/font/google'
 import { Navigation } from './components/Navigation'
 import '../app/globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const pangolin = Pangolin({ subsets: ['latin'],
+weight: ['400'], })
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <body className={inter.className}>
+      <body className={pangolin.className}>
         <Navigation />
         {children}
       </body>

@@ -9,11 +9,11 @@ export function Pagination({ info, setPage }) {
       };
 
     return (
-        <div className="flex justify-center gap-3 p-5 font-serif">
-            <button className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handlePrevious}>
+        <div className="justify-center gap-3 flex my-5">
+            <button className="bg-primary hover:bg-blue-700 text-white font-bold py-4 m-3 px-4 rounded" onClick={handlePrevious}>
                 Previous
             </button>
-            <button className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleNext}>
+            <button className="bg-primary hover:bg-blue-700 text-white font-bold py-4 m-3 px-4 rounded" onClick={handleNext}>
                 Next
             </button>
         </div>

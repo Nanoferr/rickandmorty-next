@@ -8,7 +8,6 @@ import {
 } from "@material-tailwind/react";
 
 
-
 export function FilterButton({ setStatus, setPage, setGender, setSpecies }) {
   const [open, setOpen] = useState(0);
   const [alwaysOpen, setAlwaysOpen] = useState(true);
@@ -22,6 +21,7 @@ export function FilterButton({ setStatus, setPage, setGender, setSpecies }) {
   };
 
   let status = ["Alive", "Dead", "Unknown"];
+  let genders = ["female", "male", "genderless", "unknown"];
   let species = [
     "Human",
     "Alien",
@@ -35,7 +35,8 @@ export function FilterButton({ setStatus, setPage, setGender, setSpecies }) {
     "Cronenberg",
     "Planet",
   ];
-  let genders = ["female", "male", "genderless", "unknown"];
+
+
   return (
     <Fragment>
       <Accordion open={alwaysOpen}>

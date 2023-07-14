@@ -12,7 +12,7 @@ export function Filters({ setStatus, setPage, setSpecies, setGender }) {
     }
     return (
         <>
-        <div className="lg:p-20 md:absolute right-20">
+        <div className="lg:p-20 md:absolute lg:right-0">
             <button className="w-20 bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={clear}>Clear Filters</button>
             <FilterButton setStatus={setStatus} setPage={setPage} setSpecies={setSpecies} setGender={setGender}/>
         </div>

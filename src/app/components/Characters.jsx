@@ -35,10 +35,12 @@ let api = `https://rickandmortyapi.com/api/character/?page=${page}&name=${search
       <Search setSearch={setSearch} setPage={setPage} />
     </div>
       <Filters setStatus = {setStatus} setPage={setPage} setGender={setGender} setSpecies={setSpecies}/>
-       <div className="lg:grid lg:grid-cols-3 grid grid-cols-2 md:w-fit justify-center gap-5">
+      <div className="justify-center flex">
+    <Pagination info={info} setPage={setPage}/>
+      </div>
+       <div className="lg:grid lg:grid-cols-3 grid grid-cols-2 absolute gap-5 justify-center lg:gap-1">
       <Card results={results} />
       </div>
-    <Pagination info={info} setPage={setPage}/>
     </>
   );
 }
